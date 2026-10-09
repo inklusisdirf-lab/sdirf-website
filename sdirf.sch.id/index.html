@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id" class="w-mod-js">
+<head>
+    <meta charset="utf-8">
+    <title>Home - SD Islam Roushon Fikr</title>
+    <meta content="SD Islam Roushon Fikr - Sekolah Pemimpin Islam Masa Depan yang membentuk generasi adaptif dan kreatif." name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Styling & Animasi -->
+    <style>
+        :root {
+            --primary-color: #0b4f6c;
+            --secondary-color: #01baef;
+            --accent-color: #ff8427;
+            --bg-light: #f6f7f8;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo h2 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-nav-spmb {
+            background-color: var(--accent-color) !important;
+            color: var(--white) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn-nav-spmb:hover {
+            background-color: #e06d1c !important;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, rgba(11,79,108,0.05) 0%, rgba(1,186,239,0.05) 100%);
+        }
+
+        .hero-tagline {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            max-width: 800px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(11,79,108,0.3);
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #08374d;
+            transform: translateY(-2px);
+        }
+
+        /* Section Generic */
+        .section-container {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #718096;
+        }
+
+        /* Profil Lulusan Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border-top: 4px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Galeri Kegiatan Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-card-link {
+            text-decoration: none;
+        }
+
+        .gallery-item {
+            background-color: #cbd5e0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5568;
+            font-weight: 600;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .gallery-card-link:hover .gallery-item {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item span {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            position: absolute;
+            bottom: 15px;
+        }
+
+        /* Kelas Awal Animasi (Sebelum Muncul) */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            .nav-menu {
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <h2>SD Islam Roushon Fikr</h2>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" style="color: var(--accent-color); font-weight: 600;">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="spmb.html" class="btn-nav-spmb">SPMB Online</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section dengan Animasi -->
+    <section class="hero-section">
+        <div class="hero-tagline animate-in">Sekolah Pemimpin Islam Masa Depan</div>
+        <h1 class="animate-in">Membangun Generasi Unggul, Berkarakter, dan Berwawasan Global</h1>
+        <p class="animate-in">Selamat datang di SD Islam Roushon Fikr. Kami mendidik anak-anak dengan pendekatan holistik untuk mencetak pemimpin masa depan yang adaptif menghadapi perubahan zaman dan kreatif dalam berkarya.</p>
+        <a href="spmb.html" class="btn-primary animate-in">Daftar SPMB Sekarang</a>
+    </section>
+
+    <!-- Profil Lulusan Section -->
+    <section id="profil" class="section-container">
+        <div class="section-title animate-in">
+            <h2>Profil Unggulan & Kompetensi Lulusan</h2>
+            <p>Fokus pembentukan karakter dan skill siswa di lingkungan sekolah</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate-in">
+                <h3>Adaptif</h3>
+                <p>Mampu menyesuaikan diri dengan cepat terhadap perkembangan teknologi, lingkungan baru, serta fleksibel dalam menghadapi dinamika zaman.</p>
+            </div>
+            <div class="feature-card animate-in">
+                <h3>Kreatif</h3>
+                <p>Memiliki pola pikir inovatif, berani memecahkan masalah dengan sudut pandang baru, serta aktif mengeksplorasi potensi seni dan sains.</p>
+            </div>
+            <div class="feature-card animate-in">
+                <h3>Berakhlak Mulia</h3>
+                <p>Berlandaskan nilai-nilai keislaman yang kuat, menjunjung tinggi integritas, kejujuran, serta kepedulian sosial yang tinggi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Kegiatan Section -->
+    <section id="galeri" class="section-container" style="background-color: var(--white);">
+        <div class="section-title animate-in">
+            <h2>Galeri Kegiatan Sekolah</h2>
+            <p>Momen seru dan interaktif proses pembelajaran siswa-siswi. Klik untuk melihat lebih banyak.</p>
+        </div>
+        <div class="gallery-grid">
+            <a href="galeri.html" class="gallery-card-link animate-in">
+                <div class="gallery-item">
+                    <span>Outbound & Learning Alam</span>
+                </div>
+            </a>
+            <a href="galeri.html" class="gallery-card-link animate-in">
+                <div class="gallery-item">
+                    <span>Praktik Sholat & Tahfidz</span>
+                </div>
+            </a>
+            <a href="galeri.html" class="gallery-card-link animate-in">
+                <div class="gallery-item">
+                    <span>Project-Based Learning / Sains</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SD Islam Roushon Fikr. All rights reserved.</p>
+    </footer>
+
+    <!-- Library GSAP & Skrip Animasi Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.utils.toArray(".animate-in").forEach((element) => {
+                gsap.to(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%", // Animasi mulai saat elemen masuk 85% dari bawah layar
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

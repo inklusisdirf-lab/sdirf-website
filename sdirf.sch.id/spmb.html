@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Formulir SPMB Online - SD Islam Roushon Fikr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0b4f6c;
+            --secondary-color: #01baef;
+            --accent-color: #ff8427;
+            --bg-light: #f6f7f8;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo h2 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-nav-spmb {
+            background-color: var(--accent-color) !important;
+            color: var(--white) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn-nav-spmb:hover {
+            background-color: #e06d1c !important;
+        }
+
+        .section-container {
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #718096;
+        }
+
+        .spmb-form-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(11,79,108,0.3);
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #08374d;
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 5%;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .spmb-form-wrapper {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <h2>SD Islam Roushon Fikr</h2>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="spmb.html" class="btn-nav-spmb" style="background-color: var(--accent-color); font-weight: 600;">SPMB Online</a></li>
+        </ul>
+    </header>
+
+    <section class="section-container">
+        <div class="section-title animate-in">
+            <h2>Formulir Pendaftaran SPMB Online</h2>
+            <p>Amankan kursi putra-putri tercinta untuk Tahun Ajaran Baru</p>
+        </div>
+        <div class="spmb-form-wrapper animate-in">
+            <form action="#" method="POST" onsubmit="alert('Terima kasih! Pendaftaran SPMB Anda telah tercatat. Panitia akan segera menghubungi Anda melalui WhatsApp.'); return false;">
+                <div class="form-group">
+                    <label for="nama_calon">Nama Lengkap Calon Siswa</label>
+                    <input type="text" id="nama_calon" name="nama_calon" placeholder="Contoh: Ahmad Fauzan" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_ortu">Nama Orang Tua / Wali</label>
+                    <input type="text" id="nama_ortu" name="nama_ortu" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Nomor WhatsApp Aktif</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 081234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="asal_tk">Asal TK / PAUD (Opsional)</label>
+                    <input type="text" id="asal_tk" name="asal_tk" placeholder="Contoh: TK Islam Al-Azhar">
+                </div>
+                <div class="form-group">
+                    <label for="catatan">Catatan / Pertanyaan Tambahan</label>
+                    <textarea id="catatan" name="catatan" rows="4" placeholder="Tuliskan pertanyaan jika ada..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Kirim Pendaftaran SPMB</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SD Islam Roushon Fikr. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.utils.toArray(".animate-in").forEach((el) => {
+                gsap.to(el, { scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }, opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
+            });
+        });
+    </script>
+</body>
+</html>
